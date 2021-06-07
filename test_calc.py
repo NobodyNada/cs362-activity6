@@ -13,3 +13,12 @@ class CalcTests(unittest.TestCase):
         self.assertEqual(calc.sub(3, 2), 1)
         self.assertEqual(calc.sub(2, 3), -1)
         self.assertAlmostEqual(calc.sub(5.5, 0.5), 5)
+
+    def test_mul(self):
+        self.assertEqual(calc.mul(3, 4), 12)
+        self.assertEqual(calc.mul(2, 0), 0)
+        self.assertEqual(calc.mul(-1, -1), 1)
+
+    def test_div(self):
+        self.assertAlmostEqual(calc.div(3, 4), 0.75)
+        self.assertEqual(calc.div(4, -2), -2)
